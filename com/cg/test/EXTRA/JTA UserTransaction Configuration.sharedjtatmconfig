@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BWSharedResource>
+    <name>JTA UserTransaction Configuration</name>
+    <resourceType>ae.shared.JTAUserTransactionSharedConfiguration</resourceType>
+    <config>
+        <UseSharedJndiConfig>false</UseSharedJndiConfig>
+        <ConnectionRetry>3</ConnectionRetry>
+        <TMClass>com.tibco.plugin.transaction.jtausertransaction.JTAUserTransactionTransactionManager</TMClass>
+        <TransactionTimeout>0</TransactionTimeout>
+    </config>
+</BWSharedResource>

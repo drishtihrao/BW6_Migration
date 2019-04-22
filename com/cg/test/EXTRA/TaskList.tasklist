@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repository:repository xmlns:Repository="http://www.tibco.com/xmlns/repo/types/2002">
+    <tasklist>
+        <designer>
+            <lockedProperties>
+                <locked>
+                    <properties>actualWorkTimeHours,plannedStartDate,actualCompletionDate,actualStartDate,plannedCompletionDate,progress,plannedWorkTimeHours,completed</properties>
+                </locked>
+            </lockedProperties>
+        </designer>
+    </tasklist>
+</Repository:repository>

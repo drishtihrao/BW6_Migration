@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BWSharedResource>
+    <name>Security Policy Association</name>
+    <resourceType>ws.security.policy.association.resource</resourceType>
+    <config/>
+</BWSharedResource>

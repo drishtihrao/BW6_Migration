@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://www.tibco.com/schemas/MigrationPOC/Schemas/Schema.xsd" xmlns:tns="http://xmlns.example.com/1554112599416" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://www.tibco.com/schemas/MigrationPOC/Schemas/Schema.xsd2" targetNamespace="http://xmlns.example.com/1554112599416">
+    <import namespace="http://www.tibco.com/schemas/MigrationPOC/Schemas/Schema.xsd" location="../Schemas/EmpReq.xsd"/>
+    <import namespace="http://www.tibco.com/schemas/MigrationPOC/Schemas/Schema.xsd2" location="../Schemas/EmpResp.xsd"/>
+    <message name="EmpInput">
+        <part name="Request" element="ns:Employee"/>
+    </message>
+    <message name="EmpOutput">
+        <part name="Output" element="ns2:EmpDetails"/>
+    </message>
+    <portType name="EmpMgr">
+        <operation name="Operation">
+            <input message="tns:EmpInput"/>
+            <output message="tns:EmpOutput"/>
+        </operation>
+    </portType>
+</definitions>

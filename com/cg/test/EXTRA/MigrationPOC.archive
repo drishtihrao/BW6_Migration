@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repository:repository xmlns:Repository="http://www.tibco.com/xmlns/repo/types/2002">
+    <enterpriseArchive>
+        <sharedArchive name="Shared Archive">
+            <resourceType>shared.archive.resource</resourceType>
+            <authorProperty>ranjkc</authorProperty>
+        </sharedArchive>
+        <versionProperty>1</versionProperty>
+        <authorProperty>ranjkc</authorProperty>
+        <addServiceSettableGvars>true</addServiceSettableGvars>
+        <name>MigrationPOC</name>
+        <designer/>
+        <fileLocationProperty>C:\Users\ranjkc\MigrationPOC.ear</fileLocationProperty>
+    </enterpriseArchive>
+</Repository:repository>

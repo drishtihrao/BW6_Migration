@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repository:repository xmlns:Repository="http://www.tibco.com/xmlns/repo/types/2002" xmlns:AESDK="http://www.tibco.com/xmlns/aemeta/adapter/2002" xmlns:AEService="http://www.tibco.com/xmlns/aemeta/services/2002" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <AESDK:adapter xmlns:AESDK="http://www.tibco.com/xmlns/aemeta/adapter/2002" name="GenericAdapterConfiguration">
+        <AESDK:instanceId>GenericAdapterConfiguration</AESDK:instanceId>
+        <AESDK:startup>
+            <AESDK:defaultStartup>none</AESDK:defaultStartup>
+            <AESDK:banner>true</AESDK:banner>
+            <AESDK:hasStdMicroAgent>true</AESDK:hasStdMicroAgent>
+            <AESDK:stdMicroAgentName>COM.TIBCO.ADAPTER</AESDK:stdMicroAgentName>
+            <AESDK:stdMicroAgentTimeout>10000</AESDK:stdMicroAgentTimeout>
+            <AESDK:hasClassMicroAgent>%%HawkEnabled%%</AESDK:hasClassMicroAgent>
+            <AESDK:classMicroAgentTimeout>10000</AESDK:classMicroAgentTimeout>
+            <AESDK:classMicroAgentName>COM.TIBCO.ADAPTER.adgeneric.%%Deployment%%.%%InstanceId%%</AESDK:classMicroAgentName>
+        </AESDK:startup>
+        <AESDK:deployment>
+            <AESDK:advisories xsi:nil="true"/>
+        </AESDK:deployment>
+        <AESDK:timers xsi:nil="true"/>
+        <AESDK:txControls xsi:nil="true"/>
+        <AESDK:reporting>
+            <AESDK:fileSink>
+                <AESDK:fileName>%%DirTrace%%/%%Deployment%%.%%InstanceId%%.log</AESDK:fileName>
+                <AESDK:fileCount>3</AESDK:fileCount>
+                <AESDK:fileLimit>30000</AESDK:fileLimit>
+                <AESDK:appendMode>true</AESDK:appendMode>
+                <AESDK:name>fileSink</AESDK:name>
+                <AESDK:role>
+                    <AESDK:name>infoRole</AESDK:name>
+                </AESDK:role>
+                <AESDK:role>
+                    <AESDK:name>errorRole</AESDK:name>
+                </AESDK:role>
+                <AESDK:role>
+                    <AESDK:name>warnRole</AESDK:name>
+                </AESDK:role>
+            </AESDK:fileSink>
+            <AESDK:stdioSink>
+                <AESDK:ioName>stdout</AESDK:ioName>
+                <AESDK:name>stdioSink</AESDK:name>
+                <AESDK:role>
+                    <AESDK:name>infoRole</AESDK:name>
+                </AESDK:role>
+                <AESDK:role>
+                    <AESDK:name>errorRole</AESDK:name>
+                </AESDK:role>
+                <AESDK:role>
+                    <AESDK:name>warnRole</AESDK:name>
+                </AESDK:role>
+            </AESDK:stdioSink>
+        </AESDK:reporting>
+        <AESDK:metadata xsi:nil="true"/>
+        <AESDK:designer>
+            <AESDK:advancedLogging>false</AESDK:advancedLogging>
+            <AESDK:adapterServices/>
+            <AESDK:adapterVersion>sdk51</AESDK:adapterVersion>
+        </AESDK:designer>
+    </AESDK:adapter>
+</Repository:repository>

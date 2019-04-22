@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repository:repository xmlns:Repository="http://www.tibco.com/xmlns/repo/types/2002">
+    <transformationPlugin>
+        <implementation/>
+        <attributes/>
+        <name>MessageFilter</name>
+        <designer/>
+    </transformationPlugin>
+</Repository:repository>

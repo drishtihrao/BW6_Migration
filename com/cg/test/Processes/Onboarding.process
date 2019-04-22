@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:pfx="http://www.tibco.com/schemas/MigrationPOC/Schemas/Schema.xsd" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx2="http://www.tibco.com/schemas/MigrationPOC/Schemas/Schema.xsd2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:import namespace="http://www.tibco.com/schemas/MigrationPOC/Schemas/Schema.xsd2" schemaLocation="/EmpSchemas/EmpResp.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/schemas/MigrationPOC/Schemas/Schema.xsd" schemaLocation="/EmpSchemas/EmpReq.xsd"/>
+    <pd:name>BusinessProcesses/SubProcesses/Onboarding.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startType>
+        <xsd:element name="NewJoinee">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="NamePerRecords" type="xsd:string"/>
+                    <xsd:element name="AgePerRecords" type="xsd:int"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:startType>
+    <pd:startX>150</pd:startX>
+    <pd:startY>64</pd:startY>
+    <pd:returnBindings>
+        <EmployeeStatus>
+            <Stage1>
+                <xsl:value-of select="'Completed'"/>
+            </Stage1>
+            <Stage2>
+                <xsl:value-of select="'Yet to Complete'"/>
+            </Stage2>
+        </EmployeeStatus>
+    </pd:returnBindings>
+    <pd:endName>End</pd:endName>
+    <pd:endType>
+        <xsd:element name="EmployeeStatus">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="Stage1" type="xsd:string"/>
+                    <xsd:element name="Stage2" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:endType>
+    <pd:endX>450</pd:endX>
+    <pd:endY>64</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1555669468784</pd:targetNamespace>
+    <pd:activity name="EvaluateEmpStatus">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>301</pd:x>
+        <pd:y>66</pd:y>
+        <config>
+            <element ref="pfx2:EmpDetails"/>
+        </config>
+        <pd:inputBindings>
+            <pfx2:EmpDetails>
+                <pfx2:Name>
+                    <xsl:value-of select="$Start/NewJoinee/NamePerRecords"/>
+                </pfx2:Name>
+                <pfx2:Age>
+                    <xsl:value-of select="$Start/NewJoinee/AgePerRecords"/>
+                </pfx2:Age>
+                <pfx2:Designation>
+                    <xsl:value-of select="'Associate'"/>
+                </pfx2:Designation>
+            </pfx2:EmpDetails>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>EvaluateEmpStatus</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>EvaluateEmpStatus</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>
