@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ns:CG_Employee_Set xmlns:ns="http://www.tibco.com/schemas/5xCode_After Mig/Schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ns:IT_Staff>
+        <ns:IT_EmpID>IT_EmpID1</ns:IT_EmpID>
+        <ns:IT_EmpName>IT_EmpName1</ns:IT_EmpName>
+        <ns:IT_EmpAge>1662802019</ns:IT_EmpAge>
+    </ns:IT_Staff>
+    <ns:NonIT_Staff>
+        <ns:NonIT_EmpID>NonIT_EmpID1</ns:NonIT_EmpID>
+        <ns:NonIT_EmpName>NonIT_EmpName1</ns:NonIT_EmpName>
+        <ns:NonIT_EmpAge>-107240280</ns:NonIT_EmpAge>
+    </ns:NonIT_Staff>
+    <ns:Management_Staff>
+        <ns:Management_EmpID>Management_EmpID1</ns:Management_EmpID>
+        <ns:Management_EmpName>Management_EmpName1</ns:Management_EmpName>
+        <ns:Management_EmpAge>1437287526</ns:Management_EmpAge>
+    </ns:Management_Staff>
+    <ns:Contractor_Staffs>
+        <ns:Contractor_EmpID>Contractor_EmpID1</ns:Contractor_EmpID>
+        <ns:Contractor_EmpName>Contractor_EmpName1</ns:Contractor_EmpName>
+        <ns:Contractor_EmpAge>1870131378</ns:Contractor_EmpAge>
+    </ns:Contractor_Staffs>
+</ns:CG_Employee_Set>

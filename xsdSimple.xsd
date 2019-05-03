@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://www.tibco.com/schemas/5xCode_After Mig/Schema.xsd"
+  targetNamespace="http://www.tibco.com/schemas/5xCode_After Mig/Schema.xsd"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified">
+ <xs:element name="CG_Employee_Set">
+  <xs:complexType mixed="true">
+   <xs:sequence>
+    <xs:element name="IT_Staff">
+     <xs:complexType>
+      <xs:sequence>
+       <xs:element name="IT_EmpID" type="xs:string"/>
+       <xs:element name="IT_EmpName" type="xs:string"/>
+       <xs:element name="IT_EmpGrade" type="xs:string"/>
+       <xs:element name="IT_EmpAge" type="xs:int"/>
+      </xs:sequence>
+     </xs:complexType>
+    </xs:element>
+    <xs:element name="NonIT_Staff">
+     <xs:complexType>
+      <xs:sequence>
+       <xs:element name="NonIT_EmpID" type="xs:string"/>
+       <xs:element name="NonIT_EmpName" type="xs:string"/>
+       <xs:element name="NonIT_EmpAge" type="xs:int"/>
+      </xs:sequence>
+     </xs:complexType>
+    </xs:element>
+    <xs:element name="Management_Staff">
+     <xs:complexType>
+      <xs:sequence>
+       <xs:element name="Management_EmpID" type="xs:string"/>
+       <xs:element name="Management_EmpName" type="xs:string"/>
+      </xs:sequence>
+     </xs:complexType>
+    </xs:element>
+    <xs:element name="Contractor_Staffs">
+     <xs:complexType>
+      <xs:sequence>
+       <xs:element name="Contractor_EmpID" type="xs:string"/>
+      </xs:sequence>
+     </xs:complexType>
+    </xs:element>
+    <xs:element name="CGBlockName" type="xs:string"/>
+    <xs:element name="CGBlockNumber" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+</xs:schema>
